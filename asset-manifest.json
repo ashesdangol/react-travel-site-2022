@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-travel-site-2022/static/css/main.f36b82f6.css",
+    "main.js": "/react-travel-site-2022/static/js/main.3fff5c6b.js",
+    "static/media/Moon2.0-Bold.otf": "/react-travel-site-2022/static/media/Moon2.0-Bold.68ec80129af65941142c.otf",
+    "static/media/Moon2.0-Regular.otf": "/react-travel-site-2022/static/media/Moon2.0-Regular.78446ac31dfd9bec4c55.otf",
+    "index.html": "/react-travel-site-2022/index.html",
+    "main.f36b82f6.css.map": "/react-travel-site-2022/static/css/main.f36b82f6.css.map",
+    "main.3fff5c6b.js.map": "/react-travel-site-2022/static/js/main.3fff5c6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f36b82f6.css",
+    "static/js/main.3fff5c6b.js"
+  ]
+}
