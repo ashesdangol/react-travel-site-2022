@@ -1,4 +1,6 @@
 {
+  "__comment_one": "Host on github page, set homepage ",
+  "homepage": "https://ashesdangol.github.io/react-travel-site-2022",
   "name": "front-end",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "__comment_two": "add predeploy and deploy for github live deployment",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
