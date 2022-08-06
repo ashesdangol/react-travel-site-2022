@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:wght@100;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "moon-bold";
+  src: url("../fonts/Moon2.0-Bold.otf");
+}
+@font-face {
+  font-family: "moon-regular";
+  src: url("../fonts/Moon2.0-Regular.otf");
+}
+@layer base {
+    * {
+      // font-family: Proxima Nova, system-ui, sans-serif;
+      // @apply font-moonBold;
+      @apply font-lato;
+    }
+    // MAIN NAV MENU
+    .navbar__main{
+      &--top-sticky{
+        @apply sticky top-0;
+      }
+    }
+    // BODY
+    .body__contents{
+      &--height{
+        min-height:80vh;
+      }
+    }
+
+    // FOOTER 
+    .footer__main{
+      @apply bg-gray-50;
+      &--bottom-sticky{
+        height:100%;
+      }
+    } 
+
+    h1,h2,h3,h4,h5,h6{
+      @apply font-arvo;
+    }
+    h1{
+      @apply text-5xl;
+    
+    }
+
+}
