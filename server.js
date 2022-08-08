@@ -1,3 +1,4 @@
+require('dotenv').config();
 import express from "express";
 
 // express app
@@ -9,7 +10,8 @@ app.get('/', (req, res)=>{
     res.json({message:"welcome to the app"});
 })
 
+
 // listen for requests
-app.listen(8000, () =>{
+app.listen(process.env.PORT, () =>{
     console.log('listening on port 8000')
 })
