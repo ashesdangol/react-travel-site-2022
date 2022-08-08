@@ -1,0 +1,18 @@
+/* homepage */
+.home {
+    :global{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 500px;
+        .workout-details {
+            @apply shadow-md mt-10 mx-auto bg-white p-5 rounded;
+            h4{
+                @apply text-emerald-500 text-2xl mt-0 mb-5 mx-0;
+            }
+            p{
+                @apply text-slate-500 m-0 text-sm;
+            }
+          }
+       
+    }
+  }
