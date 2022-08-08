@@ -4,7 +4,14 @@ import express from "express";
 // express app
 const app = express();
 
-// route handler
+// middleware
+
+app.use((req, res, next)=>{
+    console.log(req.path, req.method)
+    next()
+})
+
+// routes 
 
 app.get('/', (req, res)=>{
     res.json({message:"welcome to the app"});
