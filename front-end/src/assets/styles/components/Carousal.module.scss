@@ -1,0 +1,17 @@
+.section__wrapper{
+   
+    // An alternative solution which better preserves 
+    // the nested classes and styling is to use the global 
+    // scope :global on all the nested classes when using a preprocessor like sass or less.
+    :global{
+       .section__banner-wrapper{
+            &>div{  
+                // targets carousal
+                &>div{
+                    border-radius: 0;
+                }
+            }
+       }     
+        
+    }
+}

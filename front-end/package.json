@@ -1,6 +1,6 @@
 {
   "__comment_one": "Host on github page, set homepage ",
-  "homepage": "https://ashesdangol.github.io/react-travel-site-2022",
+  "homepage": ".",
   "name": "front-end",
   "version": "0.1.0",
   "private": true,

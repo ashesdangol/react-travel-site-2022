@@ -1,8 +1,10 @@
+import Banner from './components/Banner';
+
 function App() {
   return (
-    <div className="App">
-      <p>hello</p>
-    </div>
+    <section className="App">
+      <Banner/>
+    </section>
   );
 }
 
