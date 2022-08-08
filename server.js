@@ -3,8 +3,13 @@ import express from "express";
 // express app
 const app = express();
 
-// listen for requests
+// route handler
 
-app.listen(3000, () =>{
-    console.log('listening on port 3000')
+app.get('/', (req, res)=>{
+    res.json({message:"welcome to the app"});
+})
+
+// listen for requests
+app.listen(8000, () =>{
+    console.log('listening on port 8000')
 })
