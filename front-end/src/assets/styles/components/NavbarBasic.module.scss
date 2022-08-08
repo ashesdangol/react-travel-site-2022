@@ -1,0 +1,14 @@
+.header{
+   
+    // An alternative solution which better preserves 
+    // the nested classes and styling is to use the global 
+    // scope :global on all the nested classes when using a preprocessor like sass or less.
+    :global{
+       @apply bg-white dark:bg-slate-800  px-6 py-8 ring-1 ring-slate-900/5 shadow-xl;
+       .container{
+         
+            @apply mx-auto;
+       }
+        
+    }
+}
