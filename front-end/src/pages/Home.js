@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import WorkoutDetails from '../components/WorkoutDetails'
+import WorkoutForm from '../components/WorkoutForm'
 import cssModule from '../assets/styles/components/WorkoutDetail.module.scss'
 
 function Home(){
@@ -21,14 +22,15 @@ function Home(){
     return (
         <div className="container mx-auto">
             <div className={cssModule.home}>
-            <div className="workouts">
-            {/* if not workouts is not null run workouts.map */}
-                {workouts && workouts.map((workout)=>(
-                    <WorkoutDetails key={workout._id} workout={workout} />
-                    
-                ))}
+                <div className="workouts">
+                    {/* if not workouts is not null run workouts.map */}
+                    {workouts && workouts.map((workout)=>(
+                        <WorkoutDetails key={workout._id} workout={workout} />
+                        
+                    ))}
+                </div>
+                <WorkoutForm />
             </div>
-        </div>
         </div>
         
     )
