@@ -23,7 +23,7 @@ function Home(){
            
         }
         fetchWorkouts()
-    },[])
+    },[dispatch])
     return (
         <div className="container mx-auto">
             <div className={cssModule.home}>
