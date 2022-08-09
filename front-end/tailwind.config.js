@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        libre:["Libre-Baskerville", "serif"],
+        libre:["'Libre Baskerville'", "serif"],
         raleWay:["Raleway", "sans-serif"],
         moonBold: ["moon-bold"],
         moonRegular: ["moon-regular"],

@@ -2,8 +2,8 @@
 .home {
     :global{
         display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 500px;
+        grid-template-columns: 3fr 2fr;
+        gap: 5rem;
         .workout-details {
             @apply shadow-md mt-10 mx-auto bg-white p-5 rounded;
             h4{

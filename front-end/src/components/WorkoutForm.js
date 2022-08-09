@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {useState} from 'react'
+import cssModule from '../assets/styles/components/WorkoutForm.module.scss'
 
 
 function WorkoutForm(){
@@ -18,7 +19,7 @@ function WorkoutForm(){
                 setLoad('')
                 setReps('')
                 setErrorMsg(null)
-                console.log("new workout added", res)
+                console.log("new workout added", res.data)
             }
         )
         .catch(error => {
@@ -26,8 +27,8 @@ function WorkoutForm(){
         })
     }
     return(
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <h4>Add A New Workout</h4>
+        <form className={cssModule.workout__form} onSubmit={handleSubmit}>
+            <h3>Add A New Workout</h3>
 
             <label htmlFor="">Exercise Title:</label>
             <input type="text" 
