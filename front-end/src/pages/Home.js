@@ -25,18 +25,21 @@ function Home(){
         fetchWorkouts()
     },[dispatch])
     return (
-        <div className="container mx-auto">
+       
             <div className={cssModule.home}>
-                <div className="workouts">
+                <div className="workouts container ">
+                    <WorkoutForm />
                     {/* if not workouts is not null run workouts.map */}
+                    <div className='workout-detail-wrapper'>
                     {workouts && workouts.map((workout)=>(
                         <WorkoutDetails key={workout._id} workout={workout} />
                         
                     ))}
+                    </div>
                 </div>
-                <WorkoutForm />
+                
             </div>
-        </div>
+        
         
     )
 }

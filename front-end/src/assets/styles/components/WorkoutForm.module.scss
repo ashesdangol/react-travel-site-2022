@@ -1,40 +1,36 @@
 /* new workout form */
-
 .workout__form{
-    @apply flex flex-col gap-4 mt-9;
+  
+    // position: fixed;
+    @apply sticky top-0 md:top-5 md:max-h-[55vh];
+    @screen md{
+        width: 80%;
+        @apply mx-10 order-2;
+    }
+    @screen lg{
+        width: 50%;
+       
+    }
     :global{
-        label, input {
-            display: block;
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       @apply mt-5 mb-5 bg-primary-400 text-primary-50 p-5 shadow-lg shadow-primary-500;
+       h3{
+        @apply mb-5;
+       }
+       input{
+        @apply mb-5 text-black;
+       }
+       button{
+        @apply bg-secondary-500 w-36 py-2 mx-auto;
+       }
+       .error{
+        @apply mt-3 border-4 border-secondary-700;
+        &-msg{
+            @apply border-0 w-fit mx-auto p-2 bg-secondary-600;
         }
-        input {
-            padding: 10px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            &.error{
-                border: 1px solid red;
-            }
-        }
-        button {
-            @apply bg-emerald-500;
-            border: 0;
-            color: #fff;
-            padding: 10px;
-            font-family: "Poppins";
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        div.error {
-            padding: 10px;
-            background: #ffefef;
-            border: 1px solid red;
-            color: red;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-
+       }
     }
 }
+

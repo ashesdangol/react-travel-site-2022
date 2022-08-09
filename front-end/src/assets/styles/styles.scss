@@ -16,7 +16,7 @@
     * {
       // font-family: Proxima Nova, system-ui, sans-serif;
       // @apply font-moonBold;
-      @apply font-libre text-lg;
+      // @apply font-libre;
     }
     // MAIN NAV MENU
     .navbar__main{
@@ -40,7 +40,7 @@
     } 
 
     h1,h2,h3,h4,h5,h6{
-      @apply font-raleWay;
+      // @apply font-raleWay;
     }
     h1{
       @apply text-6xl;

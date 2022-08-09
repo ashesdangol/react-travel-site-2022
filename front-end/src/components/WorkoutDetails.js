@@ -19,9 +19,12 @@ function WorkoutDetails({workout}){
     return(
         <div className="workout-details">
             <h4>{workout.title}</h4>
-            <p><strong>Load (kg) : </strong>{workout.load}</p>
-            <p><strong>Reps (kg) : </strong>{workout.reps}</p>
-            <p>{formatDistanceToNow(new Date(workout.createdAt), {addSuffix: true})}</p>
+            <div className="workout-contents">
+                <p><strong>Load (kg) : </strong>{workout.load}</p>
+                <p><strong>Reps (kg) : </strong>{workout.reps}</p>
+                <p>{formatDistanceToNow(new Date(workout.createdAt), {addSuffix: true})}</p>
+            </div>
+           
             <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         </div>
         

@@ -59,7 +59,7 @@ function WorkoutForm(){
                 className={emptyFields.includes('reps') ? 'error' : ''}
             />
             <button type='submit'>Submit</button>
-            {errorMsg && <div className='error'>{errorMsg}</div>}   
+            {errorMsg && <div className='error error-msg'>{errorMsg}</div>}   
         </form>
     )
 }
