@@ -28,7 +28,7 @@
             @apply text-center font-bold text-2xl;
            }
            @screen md{
-                @apply sticky top-10;
+                @apply sticky top-5 mt-5;
                 width:400px;
             }
         }
