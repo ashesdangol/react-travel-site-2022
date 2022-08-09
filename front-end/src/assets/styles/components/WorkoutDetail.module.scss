@@ -22,12 +22,14 @@
             
         }
         .workout-details{
-           @apply mb-5 bg-primary-50 shadow-md py-5 w-[100%];
+           @apply mb-5 bg-primary-50 shadow-md py-5;
+           width: 100%;
            h4{
             @apply text-center font-bold text-2xl;
            }
            @screen md{
-                @apply sticky top-5 w-[400px];
+                @apply sticky top-10;
+                width:400px;
             }
         }
         .workout-contents{

@@ -2,9 +2,10 @@
 .workout__form{
   
     // position: fixed;
-    @apply sticky top-0 md:top-5 md:max-h-[55vh];
+    @apply sticky top-0 md:top-5;
     @screen md{
         width: 80%;
+        max-height:55vh;
         @apply mx-10 order-2;
     }
     @screen lg{
