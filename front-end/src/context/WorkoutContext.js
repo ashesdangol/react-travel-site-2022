@@ -34,7 +34,7 @@ export const WorkoutsContextProvider = ({children}) =>{
     // dispatch({type: 'CREATE_WORKOUT'})
     return(
         // value provides components to get state or dispatch an action 
-        <WorkoutsContext.Provider value={{state, dispatch}}>
+        <WorkoutsContext.Provider value={{...state, dispatch}}>
             {children}
         </WorkoutsContext.Provider>
     )
