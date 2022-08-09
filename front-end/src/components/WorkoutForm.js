@@ -1,9 +1,12 @@
 import axios from 'axios';
 import {useState} from 'react'
+import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 import cssModule from '../assets/styles/components/WorkoutForm.module.scss'
 
 
 function WorkoutForm(){
+    const {dispatch} = useWorkoutsContext();
+
     const [title, setTitle] = useState('');
     const [reps, setReps] = useState('');
     const [load, setLoad] = useState('');
@@ -20,6 +23,7 @@ function WorkoutForm(){
                 setReps('')
                 setErrorMsg(null)
                 console.log("new workout added", res.data)
+                dispatch({type:'CREATE_WORKOUTS', payload: res.data})
             }
         )
         .catch(error => {
