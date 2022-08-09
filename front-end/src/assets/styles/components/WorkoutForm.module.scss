@@ -14,6 +14,9 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;
+            &.error{
+                border: 1px solid red;
+            }
         }
         button {
             @apply bg-emerald-500;
