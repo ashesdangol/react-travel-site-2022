@@ -1,9 +1,9 @@
 require('dotenv').config();
-import express from "express";
-import workoutRoutes from './routes/workouts';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import path from 'path';
+const express =require("express");
+const workoutRoutes =require('./routes/workouts');
+const mongoose = require('mongoose') ;
+const cors = require('cors');
+const path =require('path');
 const port = process.env.PORT || 8000;
 
 
@@ -12,7 +12,7 @@ const port = process.env.PORT || 8000;
 const app = express();
 
 // CORS
-const whitelist = ['http://localhost:3000','http://localhost:8000', 'https://workbud.herokuapp.com/'];
+const whitelist = ['http://localhost:3000','http://localhost:8000', 'https://workbud.herokuapp.com'];
 const corsOptions = {
     origin: function (origin, callback){
         console.log("**Origin of request "+ origin)
@@ -44,8 +44,19 @@ app.use('/api/workouts',workoutRoutes);
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static(path.join(__dirname, 'front-end/build')));
+    app.use(express.json());
+app.use((req, res, next)=>{
+    console.log(req.path, req.method);
+    next();
+})
+
+// routes 
+
+//  /api/workouts/ => fire request '/' from workoutRequest.js
+app.use('/api/workouts',workoutRoutes);
+
     // Handle React routing, return all requests to React app
-    app.get('*', function(req, res) {
+    app.use('*', function(req, res) {
         res.sendFile(path.join(__dirname, 'front-end/build', 'index.html'));
     });
 }

@@ -1,5 +1,5 @@
-import express from 'express';
-import { createWorkout, getWorkouts, getWorkout, deleteWorkout, updateWorkout } from '../controllers/workoutController';
+const express = require('express');
+const { createWorkout, getWorkouts, getWorkout, deleteWorkout, updateWorkout } = require('../controllers/workoutController');
 
 const router = express.Router();
 
@@ -19,4 +19,4 @@ router.delete('/:id', deleteWorkout)
 // UPDATE a workout
 router.patch('/:id', updateWorkout)
 
-export default router;
+module.exports = router;
